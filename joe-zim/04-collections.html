@@ -38,7 +38,9 @@ var people = new People(person);
 
 people.add([{ name: 'Bob'},{ name: 'Jim'}]);
 
-console.log(people);
+people.remove(person);
+
+console.log(people.toJSON());
 
   </script>
 </body>
