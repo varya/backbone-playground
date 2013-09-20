@@ -12,15 +12,15 @@
         <ul id="list"></ul>
     </div>
 
-    <script id="list-template" type="text/template">
-        <li><a href=""></a></li>
+    <script id="list-template" type="text/html">
+        <li><a href="<%= url %>"><%= text %></a></li>
     </script>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="../libs/underscore.min.js"></script>
   <script src="../libs/backbone.min.js"></script>
   <script>
-
+      $(function() {
 var model = new Backbone.Model({
     data: [
         { text: 'Google', url: 'http://google.com' },
@@ -31,18 +31,23 @@ var model = new Backbone.Model({
 
 var View = Backbone.View.extend({
     initialize: function() {
-        this.template = $('#list-template').children();
     },
+    template: _.template($("#list-template").html()),
     el: '#container',
     events: {
         'click button' : 'render'
         },
     render: function() {
-        console.log(this.model.get('data'));
+        var _this = this;
+        _.forEach(this.model.get('data'), function(site){
+            var li = _this.template(site);
+            _this.$el.append(li);
+        });
     }
 });
 
 var view = new View({model: model});
+});
 
   </script>
 </body>
