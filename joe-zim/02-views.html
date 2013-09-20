@@ -31,11 +31,13 @@ var model = new Backbone.Model.extend({
 
 var View = Backbone.View.extend({
     initialize: function() {
-        console.log('init');
+        console.log(this.options.myOption);
     }
-    });
+});
 
-var view = new View();
+var view = new View({
+    myOption: 'Blah Blah!'
+});
 
   </script>
 </body>
