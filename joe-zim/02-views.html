@@ -21,7 +21,7 @@
   <script src="../libs/backbone.min.js"></script>
   <script>
 
-var model = new Backbone.Model.extend({
+var model = new Backbone.Model({
     data: [
         { text: 'Google', url: 'http://google.com' },
         { text: 'Facebook', url: 'http://facebook.com' },
@@ -31,13 +31,18 @@ var model = new Backbone.Model.extend({
 
 var View = Backbone.View.extend({
     initialize: function() {
-        console.log(this.options.myOption);
+        this.template = $('#list-template').children();
+    },
+    el: '#container',
+    events: {
+        'click button' : 'render'
+        },
+    render: function() {
+        console.log(this.model.get('data'));
     }
 });
 
-var view = new View({
-    myOption: 'Blah Blah!'
-});
+var view = new View({model: model});
 
   </script>
 </body>
