@@ -1,13 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Routers</title>
-  <meta name="description" content="">
+    <meta charset="utf-8">
+    <title>Routers</title>
+    <meta name="description" content="">
 </head>
 <body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="../libs/underscore.min.js"></script>
-  <script src="../libs/backbone.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../libs/underscore.min.js"></script>
+    <script src="../libs/backbone.min.js"></script>
+    <script>
+
+var Router = Backbone.Router.extend({
+
+    routes: {
+        ':post' : 'myFunc'
+    },
+    myFunc: function(p) {
+        console.log('xxx', p);
+    }
+
+});
+
+new Router();
+
+Backbone.history.start();
+
+
+    </script>
 </body>
 </html>
