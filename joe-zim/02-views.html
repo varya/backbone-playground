@@ -27,7 +27,15 @@ var model = new Backbone.Model.extend({
         { text: 'Facebook', url: 'http://facebook.com' },
         { text: 'Youtube', url: 'http:youtube.com' }
     ]
-});
+    });
+
+var View = Backbone.View.extend({
+    initialize: function() {
+        console.log('init');
+    }
+    });
+
+var view = new View();
 
   </script>
 </body>
