@@ -34,6 +34,12 @@ var People = Backbone.Collection.extend({
 
 var person = new Person({ name: 'Joe' });
 
+var people = new People(person);
+
+people.add([{ name: 'Bob'},{ name: 'Jim'}]);
+
+console.log(people);
+
   </script>
 </body>
 </html>
