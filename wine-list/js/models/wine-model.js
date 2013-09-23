@@ -17,7 +17,7 @@ window.Wines = Backbone.Model.extend({
 
 window.WineCollaction = Backbone.Collection.extend({
 
-    model: Wine,
+    model: Wines,
 
     url: "wines/"
 
