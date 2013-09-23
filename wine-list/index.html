@@ -24,48 +24,5 @@
     <script src="js/views/wine-details.js"></script>
     <script src="js/main.js"></script>
 
-    <script type="text/template" id="start-template">
-        <h1 id="heading">Welcome to my cellar</h1>
-        <p>There is a lot of wines here. Enjoy!</p>
-    </script>
-
-    <script type="text/template" id="header-template">
-        <button class="new">New Wine</button>
-    </script>
-
-    <script type="text/template" id="wine-details-template">
-        <div class="form-left-col">
-            <label>Id:</label>
-            <input id="wineId" name="id" type="text" value="<%= id %>" disabled />
-
-            <label>Name:</label>
-            <input type="text" id="name" name="name" value="<%= name %>" required/>
-
-            <label>Grapes:</label>
-            <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
-
-            <label>Country:</label>
-            <input type="text" id="country" name="country" value="<%= country %>"/>
-
-            <label>Region:</label>
-            <input type="text" id="region" name="region"  value="<%= region %>"/>
-
-            <label>Year:</label>
-            <input type="text" id="year" name="year"  value="<%= year %>"/>
-
-            <button class="save">Save</button>
-            <button class="delete">Delete</button>
-        </div>
-
-        <div class="form-right-col">
-            <img height="300" src="images/<%= picture %>"/>
-            <label>Notes:</label>
-            <textarea id="description" name="description"><%= description %></textarea>
-        </div>
-    </script>
-
-    <script type="text/template" id="wine-list-item-template">
-        <a href='#wines/<%= id %>'><%= name %></a>
-    </script>
 </body>
 </html>
