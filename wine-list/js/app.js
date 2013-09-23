@@ -14,3 +14,11 @@ window.Wines = Backbone.Model.extend({
     urlROOT: "wines/"
 
 });
+
+window.WineCollaction = Backbone.Collection.extend({
+
+    model: Wine,
+
+    url: "wines/"
+
+});
