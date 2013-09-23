@@ -10,6 +10,6 @@ Backbone.View.prototype.close = function(){
 }
 
 
-adTemplates(['header', 'wine-details', 'wine-list-item', 'start'], function () {
+tpl.loadTemplates(['header', 'wine-details', 'wine-list-item', 'start'], function () {
     // Run App
 });
