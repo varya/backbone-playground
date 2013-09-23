@@ -1,7 +1,7 @@
 window.WineView = Backbone.View.extend({
 
     initialize: function() {
-        this.template = _.template($('#wine-details-template').html());
+        this.template = _.template(tpl.get('wine-details'));
 
         this.model.bind('change', this.render, this);
     },

@@ -1,7 +1,7 @@
 windown.StartView = Backbone.View.extend({
 
     initialize: function() {
-         this.template = _.template( $('#start-template').html() );
+         this.template = _.template( tpl.get('start') );
     },
 
     render: function() {
