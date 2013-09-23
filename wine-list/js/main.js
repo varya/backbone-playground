@@ -8,3 +8,8 @@ Backbone.View.prototype.close = function(){
     this.unbind();
 
 }
+
+
+adTemplates(['header', 'wine-details', 'wine-list-item', 'start'], function () {
+    // Run App
+});
