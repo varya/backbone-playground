@@ -1,4 +1,4 @@
-window.Wines = Backbone.Model.extend({
+window.Wine = Backbone.Model.extend({
 
     defaults: {
         "id": null,
@@ -17,7 +17,7 @@ window.Wines = Backbone.Model.extend({
 
 window.WineCollaction = Backbone.Collection.extend({
 
-    model: Wines,
+    model: Wine,
 
     url: "wines/"
 
