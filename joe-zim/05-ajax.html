@@ -11,6 +11,9 @@
   <script src="../libs/backbone.min.js"></script>
   <script>
 
+Backbone.emulateHTTP = true;
+Backbone.emulateJSON = true;
+
 var Person = Backbone.Model.extend({
     initialize: function() {
         this.on('all', function(e){
