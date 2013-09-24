@@ -15,7 +15,7 @@ window.Wine = Backbone.Model.extend({
 
 });
 
-window.WineCollaction = Backbone.Collection.extend({
+window.WineCollection = Backbone.Collection.extend({
 
     model: Wine,
 
